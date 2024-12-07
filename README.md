@@ -1,12 +1,12 @@
-# LTV Analysis and Data Preparation
+## LTV Analysis and Data Preparation
 This project demonstrates the preparation and cleaning of marketing and transaction data, as well as calculating LTV (Lifetime Value) for a cohort of users using Google BigQuery and SQL. It serves as a simple example of data preparation and transformation, aimed at showcasing the basics of working with marketing data. The goal is to identify effective and inefficient marketing campaigns and analyze their dynamics over time by simplifying the process with temporary tables, making data transformation faster and easier to understand.
 
-## Technologies Used
+### Technologies Used
 - **Google BigQuery**: For SQL-based data processing and analysis.
 - **SQL**: To clean, transform, and aggregate data.
 - **Tableau** *(later for visualization)*: For dynamic reporting and trend analysis.
 
-## Dataset Overview
+### Dataset Overview
 1. **Marketing Costs Table (`marketing_costs`)**
    - Contains details about daily advertising spend per campaign.
 2. **Transactions Table (`transactions_rub`)**
@@ -14,7 +14,7 @@ This project demonstrates the preparation and cleaning of marketing and transact
 3. **Sessions Acquisition Table (`sessions_acquisition`)**
    - Tracks user acquisition source and campaign details.
 
-## Key Steps
+### Key Steps
 1. **Data Preparation**
    - Joining transaction data with user acquisition details.
    - Calculating discounts and income for each transaction.
@@ -27,8 +27,12 @@ This project demonstrates the preparation and cleaning of marketing and transact
 
 3. **Analysis Preparation**
    - Exporting the final table for visualization and deeper analysis.
+  
+### Files in this repository:
+- **`SQL/queries.sql`**: SQL queries used for data preparation and LTV calculation.
+- **`output/LTV_example.csv`**: Example of LTV calculation result (aggregated data for marketing channels and cohorts).
 
-## Example Query
+### Example Query
 ```sql
 WITH mrkt_costs_corrected AS (
   SELECT
